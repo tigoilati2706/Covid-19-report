@@ -1,0 +1,41 @@
+/* ========== GLOBALS ========== */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --padding-l: 50px;
+  --padding-m: 25px;
+  --padding-s: 15px;
+  --margin-l: 50px;
+  --margin-m: 25px;
+  --margin-s: 15px;
+  --font-primary: sans-serif;
+  --font-secondary: sans-serif;
+  --fontsize-xl: 2rem;
+  --fontsize-l: 1.5rem;
+  --fontsize-m: 1.25rem;
+  --fontsize-s: 0.85rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ========== UTILITY ========== */
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+}
+
+/* ========== LOCAL ========== */
+
+.App {
+  display: flex;
+  justify-content: center;
+}

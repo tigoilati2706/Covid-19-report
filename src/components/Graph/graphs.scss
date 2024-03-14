@@ -1,0 +1,142 @@
+.graph-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: var(--margin-s);
+}
+
+.latest-info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background: var(--white);
+  padding-bottom: var(--padding-xs);
+  z-index: 1;
+
+  p {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 150px;
+    font-size: var(--fontsize-xs);
+    color: var(--darkgray);
+
+    &:not(:last-child) {
+      margin-bottom: var(--margin-s);
+    }
+  }
+
+  span {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--red);
+  }
+}
+
+/* GRAPH CONTROL STYLES */
+
+.graph-control {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+
+  select {
+    font-size: var(--fontsize-xs);
+    max-width: 140px;
+    outline: none;
+    border: 1px solid var(--lightgray);
+    border-radius: 5px;
+    padding: var(--padding-xs);
+    transition: all 0.1s ease-in;
+
+    &:focus,
+    &:hover {
+      cursor: pointer;
+      background: var(--lightgray);
+    }
+  }
+
+  option {
+    background: var(--white);
+  }
+}
+
+/* TOOLTIP STYLES */
+
+.custom-tooltip {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--darkgray);
+  border-radius: 5px;
+  background: var(--white);
+  padding: var(--padding-s);
+}
+
+.label,
+.value {
+  font-size: var(--fontsize-xs);
+}
+
+.label {
+  font-weight: bold;
+  padding-bottom: var(--padding-xs);
+}
+
+.value {
+  span {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: var(--fontsize-s);
+    font-weight: bold;
+    color: var(--red);
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 425px) {
+  .latest-info {
+    p {
+      font-size: var(--fontsize-s);
+    }
+
+    span {
+      font-size: var(--fontsize-m);
+    }
+  }
+
+  .graph-control {
+    select {
+      font-size: var(--fontsize-s);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .graph-control select {
+    width: 100%;
+    max-width: unset;
+  }
+
+  .latest-info {
+    p {
+      max-width: unset;
+      font-size: 1rem;
+
+      &:not(:last-child) {
+        margin-bottom: var(--margin-m);
+      }
+    }
+
+    span {
+      font-size: var(--fontsize-l);
+    }
+  }
+
+  .label,
+  .value {
+    font-size: var(--fontsize-s);
+  }
+}

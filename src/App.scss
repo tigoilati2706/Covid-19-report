@@ -5,37 +5,95 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 :root {
-  --padding-l: 50px;
-  --padding-m: 25px;
-  --padding-s: 15px;
-  --margin-l: 50px;
+  --padding-xxl: 100px;
+  --padding-xl: 50px;
+  --padding-l: 25px;
+  --padding-m: 15px;
+  --padding-s: 8px;
+  --padding-xs: 5px;
+  --margin-l: 40px;
   --margin-m: 25px;
   --margin-s: 15px;
-  --font-primary: sans-serif;
-  --font-secondary: sans-serif;
+  --margin-xs: 10px;
+  --fontsize-xxl: 2.5rem;
   --fontsize-xl: 2rem;
   --fontsize-l: 1.5rem;
   --fontsize-m: 1.25rem;
-  --fontsize-s: 0.85rem;
+  --fontsize-s: 0.8rem;
+  --fontsize-xs: 0.7rem;
+  --blue: rgb(58, 101, 211);
+  --darkred: rgb(33, 7, 165);
+    --lightgray: rgb(211, 211, 211);
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
 }
 
 a {
+  cursor: pointer;
+  outline: none;
   text-decoration: none;
 }
 
-/* ========== UTILITY ========== */
+main {
+  width: 100%;
+  min-height: 95vh;
+  margin-top: 100px;
+  padding: 0 var(--padding-m);
+}
+
+section {
+  padding-top: 50px;
+  scroll-margin-top: 75px;
+}
+
+h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: var(--fontsize-l);
+  color: var(--black);
+  margin-bottom: var(--margin-l);
+  font-weight: bold;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+}
 
 .container {
   width: 100%;
   max-width: 1440px;
 }
 
-/* ========== LOCAL ========== */
+/* ========== MEDIA QUERIES ========== */
 
-.App {
-  display: flex;
-  justify-content: center;
+@media screen and (min-width: 425px) {
+  main {
+    padding: 0 var(--padding-l);
+  }
+
+  h2 {
+    font-size: var(--fontsize-xl);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    padding: 0 var(--padding-xl);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h2 {
+    font-size: var(--fontsize-xxl);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  main {
+    padding: 0 var(--padding-xxl);
+  }
 }

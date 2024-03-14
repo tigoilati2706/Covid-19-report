@@ -1,0 +1,39 @@
+$name: "dot";
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 65vh;
+}
+
+.#{$name} {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--red);
+  margin: 7px;
+  animation: flash 0.65s infinite alternate;
+}
+
+.#{$name}-left {
+  animation-delay: 0s;
+}
+
+.#{$name}-center {
+  animation-delay: 0.25s;
+}
+
+.#{$name}-right {
+  animation-delay: 0.5s;
+}
+
+@keyframes flash {
+  0% {
+    transform: scale(1.75);
+  }
+  50%,
+  100% {
+    transform: scale(1);
+  }
+}

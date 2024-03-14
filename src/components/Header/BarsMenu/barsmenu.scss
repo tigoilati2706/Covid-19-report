@@ -1,0 +1,136 @@
+.bars__container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.bars-menu {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+}
+
+.bars {
+  position: relative;
+}
+
+.bars,
+.bars::before,
+.bars::after {
+  width: 30px;
+  height: 5px;
+  background: var(--black);
+}
+
+.bars::before,
+.bars::after {
+  content: "";
+  position: absolute;
+}
+
+.bars::before {
+  top: -10px;
+}
+
+.bars::after {
+  bottom: -10px;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 50%;
+  max-width: 300px;
+  height: 100%;
+  background: var(--white);
+  transition: all 0.2s ease-in-out;
+  z-index: 99;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+    padding: var(--padding-m);
+    list-style: none;
+  }
+
+  li {
+    width: 100%;
+    text-align: center;
+    background: var(--darkred);
+    border-radius: 5px;
+
+    &:not(:last-child) {
+      margin-bottom: var(--margin-s);
+    }
+
+    &:hover {
+      background: var(--red);
+    }
+
+    a {
+      display: block;
+      color: var(--white);
+      font-size: var(--fontsize-m);
+      width: 100%;
+      height: 100%;
+      padding: var(--padding-m);
+    }
+  }
+}
+
+.active {
+  right: 0;
+  box-shadow: 0 0 8px 0 var(--darkgray);
+}
+
+.close-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  color: var(--black);
+
+  &:hover,
+  &:active {
+    color: var(--red);
+  }
+}
+
+.source-links {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  text-align: center;
+  width: 100%;
+  margin-bottom: var(--margin-m);
+
+  p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--margin-m);
+
+    a {
+      color: var(--blue);
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  a {
+    width: fit-content;
+    color: var(--black);
+  }
+}

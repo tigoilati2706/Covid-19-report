@@ -9,6 +9,18 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Covid 19 Visualization</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+    <!-- https://fonts.google.com/specimen/Open+Sans -->
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="css/tooplate.css">
+    <link rel="stylesheet" href="myStyle.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap"
       rel="stylesheet"
@@ -16,7 +28,35 @@
     <title>Covid-19 Statistics</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
+
+
+  
+  <body id="reportsPage">
+    <div class="" id="home">
+        <div class="container">
+            <div class="row my-charts">
+                <div class="col-4" onclick="location.href='line_chart.html'">
+                    <div class="bg-white tm-block h-100 my-container">
+                        <h2 class="tm-block-title">Line chart</h2>
+                        <div id="chart-1">
+                        </div>
+                        <p class="tm-block-title chart-text">Line chart of death cases of multiple continents in the world </p>
+                    </div>
+                </div>
+                 </nav>
+                </div>
+            </div>
+            <!-- <footer class="row tm-mt-small">
+                <div class="col-12 font-weight-light">
+                    <p class="d-inline-block tm-bg-black text-white py-2 px-4">
+                        &copy; Project Data Visualization | Created by
+                        <a rel="nofollow" href="https://www.tooplate.com" class="text-white tm-footer-link">our group</a>
+                    </p>
+                </div>
+            </footer> -->
+        </div>
+    </div>
+</body>
 </html>

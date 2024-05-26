@@ -1,0 +1,50 @@
+
+.banner {
+  background: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+hr {
+  margin-top: 20px;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+div#chart-1 {
+  background-image: url("img/line-chart.png");
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 150px;
+}
+
+div#chart-2 {
+  background-image: url("img/race-bar-chart.png");
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 150px;
+}
+
+div#chart-3 {
+  background-image: url("img/geographic-chart.png");
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 150px;
+}
+
+.row.my-charts {
+  margin-top: 10px;
+}
+
+.bg-white.tm-block.h-100.my-container {
+  min-height: 50px;
+}
+
+p.tm-block-title.chart-text {
+  background-origin: padding-box;
+  color: rgb(11, 125, 121);
+  font-size:medium;
+}
